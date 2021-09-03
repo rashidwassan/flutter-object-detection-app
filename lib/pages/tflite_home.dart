@@ -93,12 +93,13 @@ class _TFLiteHomeState extends State<TFLiteHome> {
             height: re['rect']['h'] * factorY,
             child: Container(
               decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
                   border: Border.all(
-                color: Colors.blue,
-                width: 3,
-              )),
+                    color: Colors.blue,
+                    width: 3,
+                  )),
               child: Text(
-                "${re["detectedClass"]} ${(re["confidenceInClass"] * 100).toStringAsFixed(0)}",
+                "${re["detectedClass"]} ${(re["confidenceInClass"] * 100).toStringAsFixed(0)}%",
                 style: TextStyle(background: Paint()..color = _blue),
               ),
             )))
